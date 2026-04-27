@@ -15,7 +15,7 @@ panphon>=0.20
 ```
 ## How To Run 
 - On CSF: Download or clone. Change directory. Make sure that the dependencies are in place. Use ```jobscript.slurm``` to run ```train.py```, use relevant ```jobscripteval.slurm```/```jobscriptevalnep.slurm``` to run the ```eval.py``` script.
-- Locally: Download or clone. Change directory. Make sure the dependencies are in place. Run in terminal via ```uv run python train.py``` to begin training, perform evaluation by ```uv run python eval.py```. Default evaluation dataset is test.tsv which is created for training, but you may override it by ```uv run python eval.py --test nep_test.tsv``` for example if you'd wish to recreate evaluation on the OOD dataset.  
+- Locally: Download or clone. Change directory. Make sure the dependencies are in place. Run in terminal via ```uv run python train.py``` to begin training, perform evaluation by ```uv run python eval.py```. Default evaluation happens on the ```test.tsv``` dataset. Other evaluation scripts such as ```evalnep.py```/```evalhin.py``` download Nepali or Hindi data if you'd wish to recreate evaluation on the OOD dataset.  
 ## Model 
 The model is a lightweight modernised transformer using scaled dot-product multi-head attention with rotary positional embeddings (RoPE) and grouped key/value heads and weight-tying implemented. 
 ## Training 
